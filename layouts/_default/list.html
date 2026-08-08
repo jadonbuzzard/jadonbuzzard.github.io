@@ -1,0 +1,29 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+
+{{ $pubs := where .RegularPagesRecursive ".Params.status" "published" }}
+{{ $working := where .RegularPagesRecursive ".Params.status" "working" }}
+{{ $wip := where .RegularPagesRecursive ".Params.status" "wip" }}
+
+{{ with $pubs }}
+<section class="block">
+  <h2>Publications</h2>
+  {{ range .ByWeight }}{{ partial "paper-item.html" . }}{{ end }}
+</section>
+{{ end }}
+
+{{ with $working }}
+<section class="block">
+  <h2>Working papers</h2>
+  {{ range .ByWeight }}{{ partial "paper-item.html" . }}{{ end }}
+</section>
+{{ end }}
+
+{{ with $wip }}
+<section class="block">
+  <h2>Work in progress</h2>
+  {{ range .ByWeight }}{{ partial "paper-item.html" . }}{{ end }}
+</section>
+{{ end }}
+{{ end }}

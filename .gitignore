@@ -1,0 +1,7 @@
+# Hugo build output (built and deployed by GitHub Actions)
+/public/
+/resources/
+.hugo_build.lock
+
+# Claude Code working directory
+/.claude/

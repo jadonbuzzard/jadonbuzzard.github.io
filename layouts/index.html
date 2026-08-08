@@ -1,0 +1,36 @@
+{{ define "main" }}
+<div class="intro">
+  {{ with .Site.Params.headshot }}
+  <img class="headshot" src="{{ . | relURL }}" alt="Jadon Buzzard" width="220" height="220">
+  {{ end }}
+  <div class="intro-body">
+    <h1>{{ .Site.Title }}</h1>
+    {{ .Content }}
+    <p class="linkrow">
+      {{ range .Site.Params.links }}<a href="{{ .url }}">{{ .name }}</a>{{ end }}
+    </p>
+  </div>
+</div>
+
+{{ $papers := where (where .Site.RegularPages "Section" "papers") ".Params.featured" true }}
+{{ with $papers }}
+<section class="block">
+  <h2>Research</h2>
+  {{ range .ByWeight }}
+    {{ partial "paper-item.html" . }}
+  {{ end }}
+  <p class="more"><a href="{{ "/papers/" | relURL }}">All papers and works in progress</a></p>
+</section>
+{{ end }}
+
+{{ with .Params.news }}
+<section class="block">
+  <h2>News</h2>
+  <ul class="news">
+    {{ range . }}
+      <li><span class="news-date">{{ .date }}</span> {{ .text | safeHTML }}</li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}
+{{ end }}

@@ -1,0 +1,16 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+
+  <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+  <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ .Permalink }}">
+  {{ with .Site.Params.headshot }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
+  <meta name="twitter:card" content="summary">
+
+  <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+</head>

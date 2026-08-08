@@ -1,0 +1,11 @@
+{{ define "main" }}
+<article class="single">
+  <h1>{{ .Title }}</h1>
+  <p class="post-meta">
+    {{ .Date.Format "January 2, 2006" }}
+    {{ if ne (.Lastmod.Format "2006-01-02") (.Date.Format "2006-01-02") }} · Updated {{ .Lastmod.Format "January 2, 2006" }}{{ end }}
+  </p>
+  <div class="prose">{{ .Content }}</div>
+  <p class="more"><a href="{{ "/blog/" | relURL }}">Back to blog</a></p>
+</article>
+{{ end }}

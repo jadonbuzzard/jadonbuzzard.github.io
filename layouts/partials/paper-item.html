@@ -1,0 +1,17 @@
+<article class="paper">
+  <h3 class="paper-title">
+    {{ with .Params.pdf }}<a href="{{ . }}">{{ $.Title }}</a>{{ else }}{{ .Title }}{{ end }}
+  </h3>
+  <p class="paper-meta">
+    {{ with .Params.authors }}{{ . }}{{ end }}
+    {{ with .Params.venue }}<span class="venue">{{ . }}</span>{{ end }}
+    {{ with .Params.year }}, {{ . }}{{ end }}
+    {{ with .Params.note }} <span class="paper-note">({{ . }})</span>{{ end }}
+  </p>
+  {{ with .Params.summary }}<p class="paper-summary">{{ . }}</p>{{ end }}
+  <p class="paper-links">
+    {{ with .Params.pdf }}<a href="{{ . }}">PDF</a>{{ end }}
+    {{ with .Params.slides }}<a href="{{ . }}">Slides</a>{{ end }}
+    {{ if .Content }}<a href="{{ .RelPermalink }}">Abstract</a>{{ end }}
+  </p>
+</article>

@@ -1,3 +1,44 @@
-baseURL: https://example.org/
-locale: en-us
-title: My New Hugo Project
+baseURL: "https://jadonbuzzard.github.io/"
+locale: "en-us"
+title: "Jadon Buzzard"
+
+# When you cut over to the custom domain, change baseURL to:
+#   baseURL: "https://jadonbuzzard.com/"
+# and add static/CNAME containing: jadonbuzzard.com
+
+enableRobotsTXT: true
+
+params:
+  description: "Jadon Buzzard is a PhD candidate in economics at Cornell University working on crime, labor, and political economy."
+  email: "jjb436@cornell.edu"
+  cv: "/files/cv.pdf"
+  headshot: "/images/headshot.jpg"
+  links:
+    - name: "CV"
+      url: "/files/cv.pdf"
+    - name: "Email"
+      url: "mailto:jjb436@cornell.edu"
+    - name: "X"
+      url: "https://twitter.com/jadonbuzzard"
+    - name: "LinkedIn"
+      url: "https://www.linkedin.com/in/jadon-buzzard/"
+
+menu:
+  main:
+    - name: "Home"
+      url: "/"
+      weight: 1
+    - name: "Research"
+      url: "/papers/"
+      weight: 2
+    - name: "CV"
+      url: "/files/cv.pdf"
+      weight: 3
+    - name: "Blog"
+      url: "/blog/"
+      weight: 4
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
