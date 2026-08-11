@@ -133,7 +133,7 @@ p { margin: 0 0 1rem; }
 
 .headshot {
   float: left;
-  width: 175px;
+  width: 200px;
   aspect-ratio: 3 / 4;
   object-fit: cover;
   object-position: center top;
@@ -346,7 +346,7 @@ p { margin: 0 0 1rem; }
   .headshot {
     float: none;
     display: block;
-    width: 150px;
+    width: 170px;
     margin: 0 0 1.25rem;
   }
   .news li { grid-template-columns: 1fr; gap: 0.1rem; }
