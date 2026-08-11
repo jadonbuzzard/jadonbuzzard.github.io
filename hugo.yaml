@@ -1,10 +1,10 @@
-baseURL: "https://jadonbuzzard.github.io/"
+baseURL: "https://jadonbuzzard.com/"
 locale: "en-us"
 title: "Jadon Buzzard"
 
-# When you cut over to the custom domain, change baseURL to:
-#   baseURL: "https://jadonbuzzard.com/"
-# and add static/CNAME containing: jadonbuzzard.com
+# Custom domain is served via static/CNAME (jadonbuzzard.com).
+# To revert to the GitHub Pages URL, set baseURL back to
+# "https://jadonbuzzard.github.io/" and delete static/CNAME.
 
 enableRobotsTXT: true
 
