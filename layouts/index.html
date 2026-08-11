@@ -1,10 +1,10 @@
 {{ define "main" }}
 <div class="intro">
   {{ with .Site.Params.headshot }}
-  <img class="headshot" src="{{ . | relURL }}" alt="Jadon Buzzard" width="220" height="220">
+  <img class="headshot" src="{{ . | relURL }}" alt="Jadon Buzzard" width="180" height="240">
   {{ end }}
   <div class="intro-body">
-    <h1>{{ .Site.Title }}</h1>
+    <h1 class="visually-hidden">{{ .Site.Title }}</h1>
     {{ .Content }}
     <p class="linkrow">
       {{ range .Site.Params.links }}<a href="{{ .url }}">{{ .name }}</a>{{ end }}
@@ -12,23 +12,12 @@
   </div>
 </div>
 
-{{ $papers := where (where .Site.RegularPages "Section" "papers") ".Params.featured" true }}
-{{ with $papers }}
-<section class="block">
-  <h2>Research</h2>
-  {{ range .ByWeight }}
-    {{ partial "paper-item.html" . }}
-  {{ end }}
-  <p class="more"><a href="{{ "/papers/" | relURL }}">All papers and works in progress</a></p>
-</section>
-{{ end }}
-
 {{ with .Params.news }}
 <section class="block">
   <h2>News</h2>
   <ul class="news">
     {{ range . }}
-      <li><span class="news-date">{{ .date }}</span> {{ .text | safeHTML }}</li>
+      <li><span class="news-date">{{ .date }}</span> <span class="news-text">{{ .text | safeHTML }}</span></li>
     {{ end }}
   </ul>
 </section>

@@ -3,7 +3,7 @@
     {{ with .Params.pdf }}<a href="{{ . }}">{{ $.Title }}</a>{{ else }}{{ .Title }}{{ end }}
   </h3>
   <p class="paper-meta">
-    {{ with .Params.authors }}{{ . }}{{ end }}
+    {{ with .Params.coauthors }}with {{ partial "coauthors.html" . }}{{ end }}
     {{ with .Params.venue }}<span class="venue">{{ . }}</span>{{ end }}
     {{ with .Params.year }}, {{ . }}{{ end }}
     {{ with .Params.note }} <span class="paper-note">({{ . }})</span>{{ end }}

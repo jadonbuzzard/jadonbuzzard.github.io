@@ -2,15 +2,17 @@
 <article class="single">
   <h1>{{ .Title }}</h1>
   <p class="paper-meta">
-    {{ with .Params.authors }}{{ . }}{{ end }}
+    {{ with .Params.coauthors }}with {{ partial "coauthors.html" . }}{{ end }}
     {{ with .Params.venue }}<span class="venue">{{ . }}</span>{{ end }}
     {{ with .Params.year }}, {{ . }}{{ end }}
     {{ with .Params.note }} <span class="paper-note">({{ . }})</span>{{ end }}
   </p>
-  <p class="paper-links">
-    {{ with .Params.pdf }}<a href="{{ . }}">PDF</a>{{ end }}
+  {{ if or .Params.pdf .Params.slides }}
+  <p class="paper-actions">
+    {{ with .Params.pdf }}<a href="{{ . }}">Download PDF</a>{{ end }}
     {{ with .Params.slides }}<a href="{{ . }}">Slides</a>{{ end }}
   </p>
+  {{ end }}
   <div class="prose">{{ .Content }}</div>
   <p class="more"><a href="{{ "/papers/" | relURL }}">Back to research</a></p>
 </article>

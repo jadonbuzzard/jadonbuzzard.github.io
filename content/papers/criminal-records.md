@@ -1,8 +1,7 @@
 ---
 title: "Criminal Records in the Labor Market: Industry Concentration and Employer Dynamics"
-authors: "Jadon Buzzard and Amanda Agan"
 status: "wip"
-note: "Census FSRDC proposal submitted 2/2026"
+note: "received U.S. Census Bureau approval for restricted-use data access"
 featured: false
 weight: 2
 ---

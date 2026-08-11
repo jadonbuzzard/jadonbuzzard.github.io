@@ -15,7 +15,7 @@ params:
   headshot: "/images/headshot.jpg"
   links:
     - name: "CV"
-      url: "/files/cv.pdf"
+      url: "/cv/"
     - name: "Email"
       url: "mailto:jjb436@cornell.edu"
     - name: "X"
@@ -31,12 +31,15 @@ menu:
     - name: "Research"
       url: "/papers/"
       weight: 2
-    - name: "CV"
-      url: "/files/cv.pdf"
+    - name: "Teaching"
+      url: "/teaching/"
       weight: 3
+    - name: "CV"
+      url: "/cv/"
+      weight: 4
     - name: "Blog"
       url: "/blog/"
-      weight: 4
+      weight: 5
 
 markup:
   goldmark:

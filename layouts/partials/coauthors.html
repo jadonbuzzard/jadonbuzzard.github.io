@@ -1,0 +1,8 @@
+{{- /* Renders a coauthor list as "A", "A and B", or "A, B, and C" with links. */ -}}
+{{- $n := len . -}}
+{{- range $i, $c := . -}}
+  {{- if gt $i 0 -}}
+    {{- if eq $i (sub $n 1) -}}{{- if gt $n 2 -}}, and {{ else }} and {{ end -}}{{- else -}}, {{ end -}}
+  {{- end -}}
+  {{- if $c.url -}}<a href="{{ $c.url }}">{{ $c.name }}</a>{{- else -}}{{ $c.name }}{{- end -}}
+{{- end -}}

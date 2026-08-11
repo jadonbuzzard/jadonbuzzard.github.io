@@ -1,0 +1,13 @@
+{{ define "main" }}
+<article class="cv">
+  <h1>{{ .Title }}</h1>
+  <p class="cv-actions">
+    <a href="{{ "/files/cv.pdf" | relURL }}">Download PDF</a>
+  </p>
+  <div class="cv-embed">
+    <iframe src="{{ "/files/cv.pdf" | relURL }}#view=FitH" title="Curriculum vitae of Jadon Buzzard" loading="lazy"></iframe>
+  </div>
+  <p class="cv-fallback">Can't see the PDF above? <a href="{{ "/files/cv.pdf" | relURL }}">Download it here</a>.</p>
+  {{ .Content }}
+</article>
+{{ end }}

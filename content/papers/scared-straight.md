@@ -1,6 +1,8 @@
 ---
-title: "Scared Straight? How Close Election Victories Influence Candidate Party Loyalty"
-authors: "Jadon Buzzard and Gabe Sekeres"
+title: "Election Surprise and Incumbent Strategy"
+coauthors:
+  - name: "Gabe Sekeres"
+    url: "https://gabesekeres.com/"
 status: "wip"
 featured: false
 weight: 4
