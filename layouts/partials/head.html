@@ -11,6 +11,10 @@
   {{ with .Site.Params.headshot }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
   <meta name="twitter:card" content="summary">
 
+  <link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="32x32">
+  <link rel="icon" href="{{ "images/favicon-96.png" | relURL }}" type="image/png" sizes="96x96">
+  <link rel="apple-touch-icon" href="{{ "images/apple-touch-icon.png" | relURL }}">
+
   <link rel="canonical" href="{{ .Permalink }}">
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 </head>
