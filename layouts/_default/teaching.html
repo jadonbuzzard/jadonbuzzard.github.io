@@ -1,6 +1,5 @@
 {{ define "main" }}
 <h1>{{ .Title }}</h1>
-{{ with .Params.intro }}<p class="teaching-intro">{{ . | safeHTML }}</p>{{ end }}
 
 {{ range .Params.groups }}
 <section class="block">

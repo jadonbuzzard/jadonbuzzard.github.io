@@ -1,7 +1,6 @@
 ---
 title: "Teaching"
 layout: "teaching"
-intro: "I love teaching. In a past life I was a debate coach, and giving lectures on debate theory and strategy is where I first discovered how much I enjoy helping students reason carefully through complex topics. See below for some of my teaching materials."
 groups:
   - heading: "Instructor"
     courses:

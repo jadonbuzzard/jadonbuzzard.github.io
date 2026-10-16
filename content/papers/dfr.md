@@ -1,7 +1,7 @@
 ---
 title: "Information, Technology, and Police Effectiveness: Evidence from Police Drones"
 status: "wip"
-note: "data collection ongoing"
+note: "draft soon!"
 featured: false
-weight: 1
+weight: 2
 ---

@@ -12,14 +12,5 @@
   </div>
 </div>
 
-{{ with .Params.news }}
-<section class="block">
-  <h2>News</h2>
-  <ul class="news">
-    {{ range . }}
-      <li><span class="news-date">{{ .date }}</span> <span class="news-text">{{ .text | safeHTML }}</span></li>
-    {{ end }}
-  </ul>
-</section>
-{{ end }}
+{{ with site.GetPage "/papers" }}{{ partial "research-list.html" . }}{{ end }}
 {{ end }}

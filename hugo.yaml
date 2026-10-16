@@ -28,15 +28,12 @@ menu:
     - name: "Home"
       url: "/"
       weight: 1
-    - name: "Research"
-      url: "/papers/"
+    - name: "CV"
+      url: "/cv/"
       weight: 2
     - name: "Teaching"
       url: "/teaching/"
       weight: 3
-    - name: "CV"
-      url: "/cv/"
-      weight: 4
     - name: "Blog"
       url: "/blog/"
       weight: 5
