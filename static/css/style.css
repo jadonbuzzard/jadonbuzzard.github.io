@@ -127,7 +127,7 @@ h2 {
 
 p { margin: 0 0 1rem; }
 
-.block { margin-top: 3rem; }
+.block { margin-top: 2rem; }
 
 /* Intro */
 
@@ -168,7 +168,7 @@ p { margin: 0 0 1rem; }
 
 /* Papers */
 
-.paper { margin-bottom: 1.25rem; }
+.paper { margin-bottom: 1rem; }
 .paper:last-child { margin-bottom: 0; }
 
 .paper-title {
