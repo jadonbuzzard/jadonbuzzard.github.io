@@ -1,6 +1,6 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
+<h1 class="visually-hidden">{{ .Title }}</h1>
 {{ .Content }}
 
-{{ partial "research-list.html" . }}
+{{ partial "research-list.html" (dict "section" . "abstracts" true) }}
 {{ end }}

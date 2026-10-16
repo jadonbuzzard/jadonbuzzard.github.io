@@ -1,12 +1,13 @@
 ---
 title: "Research"
-# Papers are listed on the homepage; don't render /papers/ or per-paper pages.
-# /papers/ redirects home via the alias in content/_index.md.
-build:
-  render: never
-  list: always
+url: "/research/"
+aliases:
+  - /papers/
+# Papers are listed here and on the homepage; no per-paper pages.
 cascade:
-  build:
-    render: never
-    list: always
+  - _target:
+      kind: page
+    build:
+      render: never
+      list: always
 ---

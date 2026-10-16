@@ -1,7 +1,6 @@
 ---
 title: "Jadon Buzzard"
 aliases:
-  - /papers/
   - /blog/
 ---
 

@@ -12,5 +12,8 @@
   </div>
 </div>
 
-{{ with site.GetPage "/papers" }}{{ partial "research-list.html" . }}{{ end }}
+{{ with site.GetPage "/papers" }}
+{{ partial "research-list.html" (dict "section" . "abstracts" false) }}
+<p class="read-more">Read more on my <a href="{{ .RelPermalink }}">research page</a>.</p>
+{{ end }}
 {{ end }}

@@ -1,25 +1,26 @@
-{{- /* Lists papers from the given section, grouped by status. */ -}}
-{{ $pubs := where .RegularPagesRecursive ".Params.status" "published" }}
-{{ $working := where .RegularPagesRecursive ".Params.status" "working" }}
-{{ $wip := where .RegularPagesRecursive ".Params.status" "wip" }}
+{{- /* Lists papers from .section, grouped by status. Set .abstracts to show collapsible abstracts. */ -}}
+{{ $abstracts := .abstracts }}
+{{ $pubs := where .section.RegularPagesRecursive ".Params.status" "published" }}
+{{ $working := where .section.RegularPagesRecursive ".Params.status" "working" }}
+{{ $wip := where .section.RegularPagesRecursive ".Params.status" "wip" }}
 
 {{ with $pubs }}
 <section class="block">
   <h2>Publications</h2>
-  {{ range .ByWeight }}{{ partial "paper-item.html" . }}{{ end }}
+  {{ range .ByWeight }}{{ partial "paper-item.html" (dict "page" . "abstracts" $abstracts) }}{{ end }}
 </section>
 {{ end }}
 
 {{ with $working }}
 <section class="block">
   <h2>Working Papers</h2>
-  {{ range .ByWeight }}{{ partial "paper-item.html" . }}{{ end }}
+  {{ range .ByWeight }}{{ partial "paper-item.html" (dict "page" . "abstracts" $abstracts) }}{{ end }}
 </section>
 {{ end }}
 
 {{ with $wip }}
 <section class="block">
   <h2>In Progress</h2>
-  {{ range .ByWeight }}{{ partial "paper-item.html" . }}{{ end }}
+  {{ range .ByWeight }}{{ partial "paper-item.html" (dict "page" . "abstracts" $abstracts) }}{{ end }}
 </section>
 {{ end }}

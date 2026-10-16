@@ -1,12 +1,19 @@
+{{ $p := .page }}
 <article class="paper">
   <h3 class="paper-title">
-    {{ with .Params.pdf }}<a href="{{ . }}">{{ $.Title }}</a>{{ else }}{{ .Title }}{{ end }}
-    {{ with .Params.note }}<span class="paper-note">[{{ . }}]</span>{{ end }}
+    {{ with $p.Params.pdf }}<a href="{{ . }}">{{ $p.Title }}</a>{{ else }}{{ $p.Title }}{{ end }}
+    {{ with $p.Params.note }}<span class="paper-note">[{{ . }}]</span>{{ end }}
   </h3>
-  {{ if or .Params.coauthors .Params.venue }}
+  {{ if or $p.Params.coauthors $p.Params.venue }}
   <p class="paper-meta">
-    {{ with .Params.coauthors }}with {{ partial "coauthors.html" . }}{{ end }}
-    {{ with .Params.venue }}<span class="venue">{{ . }}</span>{{ end }}
+    {{ with $p.Params.coauthors }}with {{ partial "coauthors.html" . }}{{ end }}
+    {{ with $p.Params.venue }}<span class="venue">{{ . }}</span>{{ end }}
   </p>
+  {{ end }}
+  {{ if and .abstracts $p.Content }}
+  <details class="abstract">
+    <summary>Abstract</summary>
+    <div class="abstract-text">{{ $p.Content }}</div>
+  </details>
   {{ end }}
 </article>
