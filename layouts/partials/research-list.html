@@ -12,14 +12,14 @@
 
 {{ with $working }}
 <section class="block">
-  <h2>Working papers</h2>
+  <h2>Working Papers</h2>
   {{ range .ByWeight }}{{ partial "paper-item.html" . }}{{ end }}
 </section>
 {{ end }}
 
 {{ with $wip }}
 <section class="block">
-  <h2>In progress</h2>
+  <h2>In Progress</h2>
   {{ range .ByWeight }}{{ partial "paper-item.html" . }}{{ end }}
 </section>
 {{ end }}

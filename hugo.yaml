@@ -8,8 +8,11 @@ title: "Jadon Buzzard"
 
 enableRobotsTXT: true
 
+# No tag or category pages.
+disableKinds: ["taxonomy", "term"]
+
 params:
-  description: "Jadon Buzzard is a PhD candidate in economics at Cornell University working on crime, labor, and political economy."
+  description: "Jadon Buzzard is a Ph.D. candidate in economics at Cornell University studying labor and public economics, with a focus on crime and the criminal justice system."
   email: "jjb436@cornell.edu"
   cv: "/files/cv.pdf"
   headshot: "/images/headshot.jpg"
@@ -25,18 +28,12 @@ params:
 
 menu:
   main:
-    - name: "Home"
-      url: "/"
-      weight: 1
     - name: "CV"
       url: "/cv/"
       weight: 2
     - name: "Teaching"
       url: "/teaching/"
       weight: 3
-    - name: "Blog"
-      url: "/blog/"
-      weight: 5
 
 markup:
   goldmark:

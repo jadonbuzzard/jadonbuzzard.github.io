@@ -10,7 +10,7 @@ groups:
         links:
           - text: "Syllabus"
             url: "/files/ec297-syllabus.pdf"
-  - heading: "Teaching assistant"
+  - heading: "Teaching Assistant"
     courses:
       - title: "Multiple Regression Analysis (PUBPOL 3100)"
         meta: "Cornell, Brooks School of Public Policy · Spring 2025"

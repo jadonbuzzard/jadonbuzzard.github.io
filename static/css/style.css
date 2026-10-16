@@ -90,9 +90,8 @@ a:focus-visible {
   display: flex;
   gap: 1.25rem;
   font-family: var(--sans);
-  font-size: 0.8rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
 }
 .masthead nav a {
   color: var(--muted);
@@ -117,9 +116,8 @@ h1 {
 
 h2 {
   font-family: var(--sans);
-  font-size: 0.78rem;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
   color: var(--muted);
   font-weight: 600;
   margin: 0 0 1.25rem;
@@ -263,6 +261,8 @@ p { margin: 0 0 1rem; }
 }
 
 /* CV */
+
+.cv { padding-top: 2.5rem; }
 
 .cv-actions {
   font-family: var(--sans);
